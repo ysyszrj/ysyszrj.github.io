@@ -1,0 +1,42 @@
+body {
+    background-color: #818181;
+    margin-top: 0px;
+}
+
+#contain {
+    height: 1386px;
+    width: 980px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+header{
+    border-bottom: 2px solid #938e8c;
+    height: 61px;
+    width: 892px;
+    margin: auto;
+    font-size: 14px;
+    font-family: 黑体;
+    position: relative;
+}
+
+header >div{
+    position: absolute;
+}
+
+#head_left{
+    height: 100%;
+    width: 130px;
+    background-color: #d55d5c;
+}
+#head_left >span{
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+}
+
+#head_right{
+    right: 0px;
+    bottom: 0px;
+    color: #d45e5c;
+}
