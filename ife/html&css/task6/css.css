@@ -23,6 +23,9 @@ body {
     font-family: 微软雅黑;
 }
 
+.none_indent{
+    text-indent: 0em;
+}
 #contain {
     height: 1386px;
     width: 892px;
