@@ -16,5 +16,13 @@ less的mixin，定义基础类，定义变量
     .base
 }
 
+利用代码嵌套来得到循环
+```
+.mixin-loop (@i,@type) when (@i > 0) {
+  .col-@{type}-@{i}{
+    width: 100% / (12 / @i );
+  }
+  .mixin-loop(@i - 1,@type);
+}
 
-.loop()
+```
