@@ -1,16 +1,19 @@
+@cm-padding:20px;
+@iterations: 12;
+
 #col {
   background: #cc7680;
 }
 
 .inner{
   background-color: #eee;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: @cm-padding / 2;
+  margin-right: @cm-padding / 2;
   height: 50px;
   border: #999 solid 1px;
 }
 
-@iterations: 12;
+
 .mixin-loop (@i,@type) when (@i > 0) {
   .col-@{type}-@{i}{
     width: 100% / (12 / @i );
@@ -18,11 +21,9 @@
   .mixin-loop(@i - 1,@type);
 }
 
-.mixin-loop(@iterations,ms);
-
 
 [class*="col-"] {
-  margin-top: 20px;
+  margin-top: @cm-padding;
   float: left;
 }
 

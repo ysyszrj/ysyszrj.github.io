@@ -8,42 +8,6 @@
   height: 50px;
   border: #999 solid 1px;
 }
-.col-ms-12 {
-  width: 100%;
-}
-.col-ms-11 {
-  width: 91.66666667%;
-}
-.col-ms-10 {
-  width: 83.33333333%;
-}
-.col-ms-9 {
-  width: 75%;
-}
-.col-ms-8 {
-  width: 66.66666667%;
-}
-.col-ms-7 {
-  width: 58.33333333%;
-}
-.col-ms-6 {
-  width: 50%;
-}
-.col-ms-5 {
-  width: 41.66666667%;
-}
-.col-ms-4 {
-  width: 33.33333333%;
-}
-.col-ms-3 {
-  width: 25%;
-}
-.col-ms-2 {
-  width: 16.66666667%;
-}
-.col-ms-1 {
-  width: 8.33333333%;
-}
 [class*="col-"] {
   margin-top: 20px;
   float: left;
