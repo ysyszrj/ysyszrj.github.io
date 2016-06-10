@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+}
+header {
+  height: 30px;
+  background-color: #8dd0d6;
+  color: white;
+  width: 100%;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+header .header_title {
+  position: relative;
+  left: 50%;
+}
