@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #e8e1d4;
+}
+.navbar input {
+  margin-top: 12px;
+}
+.navbar label {
+  margin-left: 20px;
+}
+#words {
+  height: 500px;
+}
+#words .wordlist {
+  width: 33.33333333%;
+  border: 1px solid black;
+  height: 100%;
+  float: left;
+}
+#mapid {
+  width: 70%;
+  height: 500px;
+}
+[v-cloak] {
+  display: none;
+}
+#reviews {
+  border: 1px solid #737373;
+  height: 500px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+#reviews .review {
+  margin-top: 10px;
+  height: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #eee;
+}
+.list_head {
+  text-align: center;
+  line-height: 2rem;
+}
+input[type="range"] {
+  width: 300px;
+  display: inline;
+}
