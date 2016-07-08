@@ -6,7 +6,7 @@ require.config({
     paths: {
         leaflet: "lib/leaflet",
         heat_map: "heat_map",
-        heatmap: "lib/heatmap.min.js",
+        heatmap: "lib/heatmap.min",
         "get_data": "get_data",
         "HeatmapOverlay": "lib/leaflet-heatmap",
         "vue": "lib/vue",
