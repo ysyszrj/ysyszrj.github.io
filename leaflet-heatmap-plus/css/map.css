@@ -1,8 +1,0 @@
-#mapid {
-  height: 800px;
-}
-
-.leaflet-zoom-hide{
-  position: absolute; !important;
-  top:0px; !important;
-}
