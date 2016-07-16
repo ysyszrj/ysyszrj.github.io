@@ -1,0 +1,273 @@
+@bg_color: #8dd0d6;
+@white: white;
+@black_color: #656565;
+@pink_color: #F5F5F5;
+
+@header_height: 2.6rem;
+@font: "黑体";
+@title_font_size: 1.3rem;
+
+@main_wid: 95%;
+
+@border_style: 2px solid @pink_color;
+.title {
+  font-family: @font;
+  font-size: 1.15rem;
+}
+
+.hs {
+  text-align: center;
+  font-family: @font;
+  font-weight: normal;
+}
+
+.main_center {
+  width: @main_wid;
+  margin: auto;
+}
+
+.top_border {
+  border-top: 1rem solid @pink_color;
+}
+
+h1 {
+  .hs;
+}
+
+h2 {
+  .hs;
+  font-size: 0.6rem;
+}
+
+h3 {
+  .hs;
+  font-size: 0.6rem;
+}
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-family: @font;
+}
+
+header {
+  height: @header_height;
+  line-height: @header_height;
+  background-color: @bg_color;
+  color: white;
+  width: 100%;
+
+  .title;
+  //font-family: @font;
+
+  a {
+    color: white;
+    text-decoration: none;
+    float: left;
+    position: absolute;
+    .title
+
+  }
+  .header_title {
+    position: relative;
+    text-align: center;
+  }
+}
+
+nav {
+  @nav_li_num: 5;
+  ul {
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    display: flex;
+
+    li {
+      float: left;
+      width: 100% / @nav_li_num;
+
+    }
+
+    a:link {
+      color: @black_color;
+
+    }
+    a:visited {
+      color: @black_color;
+    }
+
+    li:hover {
+      border-bottom: 1px #72b16a solid;
+    }
+  }
+}
+
+#display {
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+  @label_num: 5;
+  #labels {
+    overflow: hidden;
+    @labels_margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: @border_style;
+    .main_center;
+    li {
+      padding-top: 0.75rem;
+      padding-bottom: 0.2rem;
+      width: 100% / @label_num;
+      float: left;
+      overflow: hidden;
+      //height: 3rem;
+      figure {
+        width: 3rem;
+        height: 3rem;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #00C7D6;
+        border-radius: 100%;
+      }
+      img {
+        margin-top: 7px;
+        width: 32px;
+        height: 32px;
+      }
+
+      figcaption {
+        margin-top: 1rem;
+        text-align: center;
+      }
+    }
+
+  }
+}
+
+#columns {
+  //height: 3rem;
+  overflow: hidden;
+  @column_width: 100% / 3;
+  img {
+    width: 100%;
+  }
+  .column {
+    float: left;
+    width: @column_width;
+
+  }
+  .column_m {
+    float: left;
+    width: calc(@column_width + ~" - 4px");
+    border-left: @border_style;
+    border-right: @border_style;
+  }
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.module {
+  .top_border;
+  overflow: hidden;
+  img {
+    width: 30%;
+  }
+  header {
+    //padding: 0.1rem 0;
+    .main_center;
+    background-color: white;
+    border-bottom: @border_style;
+    margin-bottom: 0.7rem;
+  }
+  h1 {
+    color: @black_color;
+    text-align: left;
+  }
+  .sub_module {
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    @doc_height: 3rem;
+    .main_center;
+    .docs {
+      float: right;
+      width: 70%;
+      .doc {
+        width: 50%;
+        @left_margin: 1rem;
+        width: e("calc(50% - 1rem)");
+        float: left;
+        text-align: center;
+        background-color: @pink_color;
+        margin-left: @left_margin;
+        height: @doc_height;
+        line-height: @doc_height;
+        margin-bottom: 0.9rem;
+      }
+    }
+  }
+
+}
+
+.articles {
+
+  .top_border;
+  overflow: hidden;
+  @article_img: 30%;
+  width: 100%;
+  @margin_left_text: 0.6rem;
+
+  p {
+    margin-left: @margin_left_text;
+    color: #c6c6c6;
+  }
+
+  .article {
+    .main_center;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    overflow: hidden;
+    border-bottom: @border_style;
+    img {
+      width: @article_img;
+      float: left;
+    }
+    .article_title {
+      float: right;
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 14pt;
+      margin-left: @margin_left_text;
+      text-align: left;
+    }
+
+  }
+  .article2 {
+    .main_center;
+    .title {
+      @title_margin: 0.6rem;
+      margin-top: @title_margin;
+      margin-bottom: @title_margin;
+    }
+    .imgs {
+      display: flex;
+      li {
+        width: 32%;
+      }
+      justify-content: space-between;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  }
+}
+
+footer {
+  height: 3rem;
+  background-color: @pink_color;
+}

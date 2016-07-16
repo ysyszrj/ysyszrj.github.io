@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>leaflet-heatmap-plus</title>
+
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<div class="navbar navbar-static" id="add">
+
+    <input type="range" v-model="radius" min="1" max="100"  v-on:change = "change_radius">
+        <span>热力图半径[[ radius ]]</span>
+
+</div>
+
+<div >
+
+    <div id="mapid" class="col-md-6"></div>
+
+</div>
+
+<script src="js/require.js" defer async="true"
+        data-main="js/main.js"></script>
+<!--<script type="text/javascript" src="{{ url_for('static',filename='js/jquery-2.1.3.min.js')}}"></script>-->
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+
+
+@words_width: 25%;
+@review_width: 28%;
+
+@row_height: 500px;
+
+.navbar {
+  background-color: #e8e1d4;
+  input {
+    margin-top: 12px;
+  }
+  label {
+    margin-left: 20px;
+  }
+}
+
+#words {
+  //background-color: #1c94c4;
+  //width: @words_width;
+  //float: left;
+  height: @row_height;
+
+  .wordlist {
+    width: 100% /3;
+    border: 1px solid black;
+    height: 100%;
+    float: left;
+  }
+}
+
+#mapid {
+  //background-color: #5bc0de;
+  //width: 100% - @words_width - @review_width;
+  //float: left;
+  width:70%;
+  height: @row_height;
+}
+
+[v-cloak]{
+  display: none;
+}
+
+#reviews {
+  //width: @review_width;
+  //float: right;
+  border: 1px solid #737373;
+  height: @row_height;
+  overflow-y: auto;
+  padding-right: 15px;
+  .review {
+    margin-top: 10px;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #eee;
+  }
+}
+
+.list_head {
+  text-align: center;
+  line-height: 2rem;
+}
+
+input[type="range"] {
+  width: 300px;
+  display: inline;
+}
