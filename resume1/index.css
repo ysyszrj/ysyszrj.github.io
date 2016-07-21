@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'FontAwesome';
-  src: url('fonts/fontawesome-webfont.eot?v=4.3.0');
-  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('static/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('static/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('static/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('static/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('static/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('static/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -83,6 +83,8 @@ ul,
 ol,
 dl {
   line-height: 1.42857143;
+  padding-left: 0;
+  margin-bottom: 0rem;
 }
 article {
   padding-bottom: 2rem;
@@ -282,9 +284,8 @@ address {
 header .contact {
   float: left;
   margin: 0;
-  padding-left: 16px;
 }
-@media print or (max-width: 767px) {
+@media print and (min-width: 992px) {
   header .contact {
     float: none;
     margin-top: 10px;
@@ -298,6 +299,11 @@ header .contact li {
   font-size: 1.125rem;
   word-break: break-all;
 }
+@media print and (max-width: 991px) {
+  header .contact li {
+    width: 25%;
+  }
+}
 header a:link,
 header a:visited {
   color: white;
@@ -305,14 +311,6 @@ header a:visited {
 header a:hover,
 header a:active {
   color: #A3D3D1;
-}
-.title,
-address {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-.contact_e-mail {
-  padding-left: calc(12px + 1rem);
 }
 .contact_e-mail::before {
   font-family: FontAwesome;
@@ -322,12 +320,12 @@ address {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f0e0";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact_github {
-  padding-left: calc(12px + 1rem);
+@media screen and (min-width: 992px) {
+  .contact_e-mail::before {
+    width: 1.3rem;
+  }
 }
 .contact_github::before {
   font-family: FontAwesome;
@@ -337,12 +335,12 @@ address {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f092";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact_blog {
-  padding-left: calc(12px + 1rem);
+@media screen and (min-width: 992px) {
+  .contact_github::before {
+    width: 1.3rem;
+  }
 }
 .contact_blog::before {
   font-family: FontAwesome;
@@ -352,14 +350,14 @@ address {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f09e";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.contact_my_page {
-  padding-left: calc(12px + 1rem);
+@media screen and (min-width: 992px) {
+  .contact_blog::before {
+    width: 1.3rem;
+  }
 }
-.contact_my_page::before {
+.contact_works::before {
   font-family: FontAwesome;
   font-size: inherit;
   text-rendering: auto;
@@ -367,16 +365,16 @@ address {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f1ea";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .contact_works::before {
+    width: 1.3rem;
+  }
 }
 footer {
   text-align: center;
   margin: 30px 6px;
-}
-section {
-  margin-bottom: 1rem;
 }
 .sec-title-wrapper {
   display: flex;
@@ -449,6 +447,9 @@ section {
 .sec-content:after {
   clear: both;
 }
+.subsec-content {
+  padding-bottom: 1.5rem;
+}
 @media screen and (max-width: 991px) {
   .subsec-content {
     padding-left: 1.5rem;
@@ -465,7 +466,6 @@ section {
   padding-top: 1rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  padding-bottom: 1rem;
 }
 .timeline-wrapper {
   overflow-y: hidden;
@@ -549,9 +549,11 @@ section {
   margin: 10px 0 5px 0;
 }
 .education-major,
-.education-honor {
+.education-honor,
+.education-college,
+.education-lab {
   list-style-type: none;
-  line-height: 1.42857143;
+  line-height: 1.85714286;
   margin: 0;
   padding: 0;
 }
@@ -561,8 +563,35 @@ section {
 .education.timeline-item::before {
   content: "\f02e";
 }
-.education-major {
-  padding-left: calc(12px + 1rem);
+.education-college::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f19c";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-college::before {
+    width: 1.3rem;
+  }
+}
+.education-lab::before {
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f0c0";
+  display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-lab::before {
+    width: 1.3rem;
+  }
 }
 .education-major::before {
   font-family: FontAwesome;
@@ -572,12 +601,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f19d";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
 }
-.education-honor {
-  padding-left: calc(12px + 1rem);
+@media screen and (min-width: 992px) {
+  .education-major::before {
+    width: 1.3rem;
+  }
 }
 .education-honor::before {
   font-family: FontAwesome;
@@ -587,9 +616,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f091";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .education-honor::before {
+    width: 1.3rem;
+  }
 }
 .language .sec-content {
   margin: 10px 0 0 22px;
@@ -632,9 +664,6 @@ section {
 .language .sec-title-wrapper::before {
   content: "\f086";
 }
-.language-desc-item {
-  padding-left: calc(12px + 1rem);
-}
 .language-desc-item::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -643,9 +672,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .language-desc-item::before {
+    width: 1.3rem;
+  }
 }
 .experience-place,
 .experience-project-type {
@@ -694,9 +726,6 @@ section {
 .experience-project.timeline-item::before {
   content: "\f135";
 }
-.experience-task {
-  padding-left: calc(12px + 1rem);
-}
 .experience-task::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -705,9 +734,12 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f013";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .experience-task::before {
+    width: 1.3rem;
+  }
 }
 .experience-project-link {
   padding-left: calc(1rem + 0.875rem);
@@ -733,11 +765,6 @@ section {
 .skills-item-description {
   margin: 0;
 }
-.skills-item-summary {
-  font-size: 1.125rem;
-  margin: 10px 0 5px 0;
-  font-weight: bold;
-}
 .skills-miscellaneous {
   margin-top: 10px;
   padding: 0;
@@ -757,9 +784,6 @@ section {
 .skills-miscellaneous.timeline-item::before {
   content: "\f085";
 }
-.skills-item-description {
-  padding-left: calc(12px + 1rem);
-}
 .skills-item-description::before {
   font-family: FontAwesome;
   font-size: inherit;
@@ -768,9 +792,28 @@ section {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0);
   content: "\f005";
-  width: calc(12px + 1rem);
-  margin-left: calc(-12px - 1rem);
   display: inline-block;
+}
+@media screen and (min-width: 992px) {
+  .skills-item-description::before {
+    width: 1.3rem;
+  }
+}
+.item-summary {
+  font-size: 1.125rem;
+  margin: 10px 0 5px 0;
+  font-weight: bold;
+}
+dt {
+  line-height: 1.33;
+}
+.tag {
+  background-color: green;
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  line-height: 2.62857143rem;
+  margin-right: 1rem;
 }
 aside {
   right: 0;
@@ -836,7 +879,7 @@ aside a:active {
 }
 @media screen and (max-width: 767px) {
   .container {
-    padding: 5px 0;
+    padding: 0 0;
     margin-top: 0;
   }
 }

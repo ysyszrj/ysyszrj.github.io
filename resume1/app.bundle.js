@@ -10279,15 +10279,15 @@
 					"link": "ysyszrj@126.com"
 				},
 				{
-					"type": "github",
-					"link": "https://github.com/ysyszrj"
-				},
-				{
 					"type": "blog",
 					"link": "http://www.jianshu.com/users/6086e1fe9958/latest_articles"
 				},
 				{
-					"type": "my_page",
+					"type": "github",
+					"link": "https://github.com/ysyszrj"
+				},
+				{
+					"type": "works",
 					"link": ""
 				}
 			],
@@ -10307,6 +10307,7 @@
 					"type_ch": "硕士研究生",
 					"name": "浙江大学",
 					"major": "计算机科学与技术",
+					"college": "计算机科学与技术",
 					"start": "2014",
 					"end": "2017",
 					"lab": "计算机辅助设计与图形学国家重点实验室"
@@ -10316,6 +10317,7 @@
 					"type_ch": " 本 科 ",
 					"name": "江南大学",
 					"major": "数字媒体技术",
+					"college": "数字媒体技术",
 					"start": "2010",
 					"end": "2014"
 				}
@@ -10323,29 +10325,64 @@
 			"projects": [
 				{
 					"type": "project",
-					"title": "title1",
-					"start": "2016.1",
-					"end": "2016.5",
+					"title": "个人简历",
+					"start": "2016.7",
+					"end": "2016.7",
+					"link": "",
 					"description": [
-						"项目描述"
+						"一个能够利用json数据来输出简历的模板",
+						"Vue.js渲染HTML",
+						"Less生成响应式页面样式，兼容手机不同屏幕大小",
+						"Webpack进行模块优化"
 					],
 					"tags": [
-						"tag1",
-						"tag2"
+						"webpack",
+						"Less",
+						"Vue.js"
 					]
 				},
 				{
 					"type": "project",
-					"title": "title2",
-					"start": "",
-					"end": "",
+					"title": "城市评论主题热力图可视分析系统",
+					"start": "2016.5",
+					"end": "2016.7",
 					"description": [
-						"项目描述",
-						"项目描述2"
+						"利用商家评论数据来分析地理差异性",
+						"Python(Flask)搭建服务器，初步筛选处理数据，对客户端相应",
+						"MongoDB缓存地理数据来帮助优化加速客户端相应速度",
+						"Leaflet.js提供基础的地图库",
+						"heatmap.js提供热力图生成接口",
+						"自主改进插件来支持更多热力图交互信息",
+						"利用Vue.js框架来优化数据模型的交互",
+						"Gulp部署前端工程"
 					],
 					"tags": [
-						"tag1",
-						"tag2"
+						"Gulp",
+						"Leaflet.js",
+						"MongoDB",
+						"Vue.js"
+					]
+				},
+				{
+					"type": "project",
+					"title": "评论数据的主题挖掘以及可视化",
+					"start": "2016.1",
+					"end": "2016.5",
+					"description": [
+						"评论文本主题挖掘以及可视化",
+						"对文本词性标注之后再进行Word2Vec词向量训练优化",
+						"关系数据库SQLite存储基础数据，缓存加速",
+						"支持不同的聚类算法",
+						"支持任意商家的主题挖掘",
+						"利用d3.js来实现可视化层次树，词云，气泡图",
+						"Bootstrap框架布局",
+						"Gulp部署前端工程"
+					],
+					"tags": [
+						"D3.js",
+						"聚类",
+						"Vue.js",
+						"Word2Vec"
 					]
 				}
 			],
@@ -10355,16 +10392,32 @@
 					"title": "前端",
 					"classes": [
 						{
-							"class": "技能种类",
+							"class": "HTML/CSS",
+							"description": [
+								"了解语义化HTML，模块化CSS",
+								"了解Less"
+							]
+						},
+						{
+							"class": "JavaScript",
 							"description": [
 								"描述"
 							]
 						},
 						{
-							"class": "技能种类",
-							"description": [
-								"描述"
+							"class": "前端框架",
+							"": [
+								""
 							]
+						}
+					]
+				},
+				{
+					"type": "backend",
+					"title": "编程能力",
+					"classes": [
+						{
+							"class": "了解"
 						}
 					]
 				}
